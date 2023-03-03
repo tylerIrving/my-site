@@ -1,3 +1,5 @@
+from decouple import config
+
 """
 Django settings for backend project.
 
@@ -20,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'gx_$bk&#u_5orl2#8#yz#6h$(0#yjjoaaaf-q7dpo@mb_f6x@f'
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
